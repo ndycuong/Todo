@@ -1,0 +1,1 @@
+export const calendarItems = ['My Day', 'My Week','All Todos']

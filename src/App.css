@@ -1,0 +1,1014 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+}
+
+/* .App{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+} */
+/* 
+.Sidebar{
+    background-color: #7C99AC;
+    width: 20%;
+    min-width: 260px;
+    border-right: 1px solid #EAB2A0;
+
+} */
+/* .Sidebar {
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Sidebar.open {
+    transform: translateX(0);
+  } */
+  /* .Sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 1;
+  } */
+  
+  /* .Sidebar.open {
+    width: 270px;
+  } */
+  
+  /* .SidebarButton {
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    background-color: #EAB2A0;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px 0px 5px;
+    cursor: pointer;
+    z-index: 2;
+  } */
+  
+  /* .SidebarButton.open {
+    left: 20px;
+  } */
+  
+  //
+  /* .SidebarButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: #EAB2A0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+} */
+
+.fa-bars {
+  font-size: 24px;
+}
+
+.fa-times {
+  font-size: 24px;
+}
+
+.App {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .Sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    opacity: 0.9;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 1;
+    border-color: #EAB2A0;
+    border-radius: 5px;
+  }
+  
+  .Sidebar.open {
+    width: 270px;
+  }
+  
+  .SidebarButton {
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    background-color: #EAB2A0;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px 0px 5px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .SidebarButton.open {
+    left: 280px;
+  }
+  
+  .Main {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    /* opacity: 0.85; */
+    /* background-image: linear-gradient(to right,#7C99AC,#EAB2A0 );
+    background-repeat: no-repeat;
+    background-size: cover; */
+    position: relative;
+    margin-left: 0; /* Add this to remove the margin initially */
+    transition: margin-left 0.3s;
+  }
+  
+  /* Add a margin to the Main component when the Sidebar is open */
+  .App .Sidebar.open ~ .Main {
+    margin-left: 270px; /* Adjust this value to match the Sidebar width */
+  }
+  
+  /* Rest of your CSS... */
+  
+
+
+/* .Main{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,#7C99AC,#EAB2A0 );
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+/* User */
+
+.User{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    border-bottom: 1px solid #EAB2A0;
+}
+
+.User .logo img{
+    width: 70px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+}
+
+.User .Name{
+    font-size: 2.0rem;
+    font-weight: bold;
+    color:#EAB2A0;
+}
+
+.User .Log-out{
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+}
+
+/* .User .infor a {
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+} */
+
+/* AddNewTodo */
+/* .AddNewTodo {
+    border-bottom: 1px solid #ebebeb;
+} */
+
+.AddNewTodo .btn{
+    margin-top:1.5rem;
+    margin-bottom:1rem;
+    padding: 0.9rem;
+    width: 100%;   
+    height: 80px;
+}
+
+.AddNewTodo .btn button{
+    width: 100%;
+    height:100%;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    background-color: #EAB2A0;
+}
+
+.AddNewTodo .btn button:hover{
+    background-color: #FFEFEF;
+}
+
+/* Add new todo form */
+.TodoForm{
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    /* height: 100%; */
+}
+.TodoForm h3{
+    font-size: 2rem;
+    text-align: center;
+}
+.TodoForm input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    background-color: #FFEFEF;
+}
+.TodoForm input:focus{
+    outline: none;
+}
+.TodoForm .pick-day{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    /* background-color: #EAB2A0; */
+    border-color: #FFEFEF;
+}
+.TodoForm .pick-time{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    /* background-color: #EAB2A0; */
+    border-color: #FFEFEF;
+}
+
+.TodoForm .remind{
+    display: flex;
+    align-items: center;
+}
+.TodoForm .remind p{
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+.TodoForm .title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.TodoForm .title p{
+    margin-left: 0.5rem;
+}
+.TodoForm .pick-project{
+    
+    margin: 0.5 rem;
+}
+.TodoForm .pick-project p{
+    font-size: 1.5rem;
+}
+.TodoForm .pick-project .projects{
+    display: flex;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.TodoForm .pick-project .projects .project{
+    border:1px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0 0.5rem 0 0; 
+    background: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+
+}
+.TodoForm .pick-project .projects .active{
+    background: #7C99AC;
+    color: white;
+}
+.TodoForm .cancel{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.TodoForm .confirm {
+    display: flex;
+}
+.TodoForm .confirm button{
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: #EAB2A0;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 100px;
+    line-height:25px;     
+}
+.TodoForm .confirm button p{
+    margin: 0 auto;
+    color: black;
+}
+.AddNewTodo TimePicker{
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Modal */
+
+.Modal {
+   position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+
+}
+
+.Modal .Container {
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    background: #EAB2A0;
+    border-radius: 5px;
+}
+
+/* Calendar */
+.Calendar{
+    padding: 1rem;
+    border-bottom: 1px solid #EAB2A0;
+    padding-bottom:1.5rem;
+}
+.Calendar .header{
+    display: flex;
+    align-items: center;
+}
+.Calendar .header .title{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.Calendar .header .title p{
+    font-size: 2rem;
+    margin-left: 1rem;
+    /* color: #EAB2A0; */
+    font-weight: bold;
+}
+.Calendar .header .btns span {
+    /* border-radius: 50%; */
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.Calendar .header .btns span:hover{
+    background-color: #ADC4CE;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.Calendar .items{
+    padding-left:2.5rem; 
+    padding-top: 1rem;
+}
+.Calendar .items .item{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.Calendar .items .item:hover{
+    color: #EAB2A0;
+    cursor: pointer;
+}
+
+/* Projects */
+.Projects{
+    padding: 1rem;
+    margin-top:1rem;
+    /* border-bottom: 1px solid #EAB2A0; */
+}
+.Projects .header{
+    display: flex;
+    align-items: center;
+}
+.Projects .header .title{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.Projects .header .title p{
+    font-size: 2rem;
+    margin-left: 1rem;
+    /* color: #EAB2A0; */
+    font-weight: bold;
+}
+.Projects .header .btns{
+    display: flex;
+    align-items: center;
+}
+.Projects .header .btns span {
+    /* border-radius: 50%; */
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 0.25rem;
+}
+.Projects .header .btns span:hover{
+    background-color: #ADC4CE;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.Projects .items{
+    padding-left: 2.5rem;
+    padding-top:1rem;
+}
+.Projects .name:hover{
+    color: #EAB2A0;
+    cursor: pointer;
+}
+.Project{
+    position: relative;
+    display :flex;
+    padding: 0.5rem;
+    cursor: pointer;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.Project .name{
+   cursor: pointer; 
+   word-break: break-all;
+}
+.Project .btns{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.Project .btns .total-todos{
+    position: absolute;
+    right: 0;
+    background-color: #EAB2A0;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 0.25rem 0.25rem 0.25rem 0rem;
+}
+.Project .btns .edit-delete{
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+.Project .btns .edit-delete span{
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 0.25rem;
+}
+.Project .btns .edit-delete span.edit:hover{
+    background: #ADC4CE;
+    border-radius: 50%;
+}
+.Project .btns .edit-delete span.delete:hover{
+    background: #ADC4CE;
+    border-radius: 50%;
+}
+
+/* FrojectForm */
+.ProjectForm{
+    background-color: #EAB2A0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+.ProjectForm h3{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.ProjectForm input{
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    border: none;
+    font-size: 1.5rem;
+}
+.ProjectForm button{
+    position: absolute;
+    height: 40px;
+    width: 50%;
+    bottom:0 ;
+    border-color: #ADC4CE;
+    font-size: 1.2rem;
+    fonr-weight: bold;
+    cursor: pointer;
+    transition: filter 0.5s ease-in-out;
+}
+.ProjectForm button:hover{
+    filter: brightness(1.2);
+}
+
+.ProjectForm button.confirm{
+    right:0;
+    background-color: #3498db;
+    border-right: 0.25px solid #ADC4CE;
+   
+}
+.ProjectForm button.cancel{
+    left:0;
+    background-color: #e74c3c;
+    border-left: 0.25px solid #ADC4CE;
+}
+
+/* Todos */
+.Todo{
+    padding: 1rem 2.5rem;
+}
+.Todo .todo-container{
+    background-color: #333 !important;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+}
+.Todo .todo-container span{
+    cursor: pointer;
+
+}
+.Todos{
+    width: 95%;
+    background-color: #EAB2A0;
+    position: absolute;
+    left: 2.5%;
+    border: 2px solid #7C99AC;
+    /* left: 5%;
+    right:5%; */
+    /* margin-left: 3%; */
+    /* padding-right: 3%;
+    
+    margin-right: 3%; */
+
+    top: 200px;
+    border-radius: 10px;
+    opacity: 0.65;
+    bottom: 1%;
+    overflow-y: auto;
+}
+
+.Todos .selected-project{
+    position: relative;
+    text-align: center;
+    margin: 1rem;
+    padding-bottom: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+
+}
+.Todos .todos{
+    overflow-y: auto;
+}
+.Todo .todo-container{
+    background-color: #7C99AC;
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    border: 1px solid #7C99AC;
+    border-radius:10px;
+}
+.Todo .todo-container .text{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex:1;
+    margin : 0 10px;
+
+}
+.Todo .todo-container .text p{
+    cursor: pointer;
+
+    display: inline-block;
+    font-size: 1.8rem;
+
+}
+/* .Todo .todo-container .text p:hover{
+ 
+    cursor: pointer;
+
+} */
+.Todo .todo-container .check-todo{
+    margin-right: 25px;
+    cursor: pointer;
+}
+.Todo .todo-container .text span{
+    font-size: 1.5rem;
+    word-break: break-all;
+    color: black;
+}
+.Todo .todo-container .text .line{
+    height: 2px;
+    background: #7C99AC;
+    position: absolute;
+    top:25%;
+    width:0;
+}
+.Todo .todo-container .text .line-through{
+    width: 100%;
+}
+.Todo .todo-container .add-to-next-day{
+    margin-right: 10px;
+
+}
+
+/* EditTodo */
+.EditTodo{
+    /* position: absolute;
+    bottom: 40px;
+    right: 5%;
+    background-color: #7C99AC;
+    opacity: 0.65;
+    top:200px;
+    border-radius: 10px;
+    width: 40%;
+    bottom: 5%; */
+    background-color: #EAB2A0;
+} 
+
+.EditTodo .header{
+    /* margin: 1rem; */
+    /* font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #EAB2A0; */
+}
+
+
+
+/* Player */
+
+.player-main{
+    /* display: flex;
+    flex-direction: column; */
+    display: flex;
+    top:1;
+    right:0;
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    transform: translate(25%, 0%);
+    /* margin-right:1rem;
+    margin-left: 1rem; */
+}
+.player-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 3%;
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: space-around;
+    left: 73%;
+    transform: translateX(-50%);
+    position: relative;
+     */
+}
+.player-card .image{
+    padding-right: 2rem;
+}
+.music .control-icon{
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 30%;
+    transform: translateX(-50%); */
+
+}
+.control-icon .icons{
+    color: #EAB2A0 !important;
+    margin: 1rem;
+}
+.music-img{
+    margin-right: 5%;
+    width: 110px;
+    height: 110px;
+}
+.name-player .name{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+    /* position: absolute;
+    top:6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    background-image: linear-gradient(to right,#7C99AC,#EAB2A0 );
+    opacity: 0.65;
+    color: black;
+    border-radius: 10px; */
+    /* border: 1px solid #EAB2A0; */
+
+
+/* .player-container{
+    padding: 2px;
+    margin: 2px;
+    background-color: #EAB2A0;
+    border-radius: 10px;
+    position: relative;
+} */
+
+/* .song-name{
+    cursor: pointer;
+}
+.song-name:hover{
+    color: #7C99AC;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.8rem;
+}*/
+
+.icons:hover{
+    color: #7C99AC !important;
+    cursor: pointer;
+}
+.active-song{
+    color: #EAB2A0 !important;
+    /* font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    color: black;     */
+    /* font-size: 2.5rem;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top:3%;
+    left:50%;
+    transform: translateX(-50%); */
+}
+.music-img{
+    /* margin-top: 3%;
+    margin-left: 40%;
+    width: 10%;
+    border-radius: 10px; */
+}
+.rotate {
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/* .Pomodoro{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 3%;
+    height: 10%;
+    padding: 10px;
+}
+.Focus{
+    display: flex;
+}
+.Break{
+    display: flex;
+} */
+  
+
+/* Next7Days */
+.Next7Days .day{
+    display: flex;
+    margin: 0.5rem;
+    padding-left:1.5rem;
+}
+.Next7Days .day .name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.Next7Days .day .total-todos{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+} 
+.Next7Days .todos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+}  
+
+/* DeleteProject */
+/* DeleteProject.css */
+
+.DeleteProject {
+    background-color: #EAB2A0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .DeleteProject h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .DeleteProject p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .cancel-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #2980b9;
+  }
+  
+/* Pomodoro */
+.Pomodoro {
+    justify-content: center;
+    align-items: center;
+    width:200px;
+    
+  }
+  
+  .clock {
+    width: 100px;
+    /* display: flex; */
+    margin:0;
+    /* text-align: center; */
+  }
+  
+.study-text {
+    position: absolute;
+    font-size: 2rem;
+    right: 60%;
+    top: 7%;
+} 
+.study-text h2{
+    color: #EAB2A0;
+} 
+
+
+  
+.circle-container {
+    left: 70%;
+    width: 150px;
+    height: 150px;
+  }
+  
+.circle {
+    left: 15%;
+    top: 5%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /* transform: rotate(-90deg); */
+    transform-origin: center;
+  }
+  
+.circle-background {
+    fill: none;
+    stroke: #A3B7C4;
+    stroke-width: 10;
+  }
+  
+.circle-progress {
+    fill: none;
+    stroke: #EAB2A0; 
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 0 275;
+    transition: stroke-dasharray 1s linear;
+  }
+  
+.timer-text {
+    position: absolute;
+    top: 8%;
+    left: 16%;
+    color: #EAB2A0;
+    /* transform: translate(-50%, -50%); */
+    font-size: 2rem;
+  }
+  
+.Pomodoro button {
+    display: flex;
+    /* display: block; */
+    /* margin-left: 10%;
+    padding: 10px 20px; */
+    margin-bottom: 0.5rem;
+    padding:0.25rem;
+    padding-right:0.5rem;
+    font-size: 1.5rem;
+    background-color: #EAB2A0;
+    color: black;
+    border-color: #A3B7C4;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .Pomodoro button:disabled {
+    background-color: #EAB2A0;
+    cursor: not-allowed;
+  }
+  
+  .Pomodoro button:hover {
+    background-color: #A3B7C4;
+  }
+  
+.clock .btn{
+    height: 50px;
+    /* display: flex; */
+    /* margin-left: 50%; */
+    margin-top: 3.3rem;
+    margin-left: 5rem;
+    color: black;
+    border-color: #A3B7C4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
